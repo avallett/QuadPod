@@ -3465,3 +3465,346 @@ Migrating to CreateUsers (20200420150320)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUsersToArticles (20200420155207)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20200420155207_add_users_to_articles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200420155207_add_users_to_articles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20200420155207_add_users_to_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200420155207"]]
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:54:42 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/QuadPod/app/views/welcome/index.html.erb:8: syntax error, unexpected '<', expecting ')'
+    <% else );@output_buffer.safe_...
+    ^):
+  
+app/views/welcome/index.html.erb:8: syntax error, unexpected '<', expecting ')'
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:55:55 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 476ms (Views: 469.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:55:59 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:56:01 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-20 15:56:11 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 77ms (Views: 62.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 75.190.228.160 at 2020-04-20 15:56:13 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (4.7ms)
+  Rendered articles/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 75.190.228.160 at 2020-04-20 15:56:20 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7oks9c9oMfhfSVvtdbCZT50UnDPHaJ8BSyKigRUGeQeq/KKqVurIsMhM3EkFA1BigDkXWfXknO+9g4kkOawj7A==", "article"=>{"title"=>"Hi", "text"=>"Test without signin\r\n"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.2ms)
+  Rendered articles/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 68ms (Views: 50.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-20 15:57:01 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-20 15:57:08 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:57:13 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 75.190.228.160 at 2020-04-20 15:57:14 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 45ms (Views: 38.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 75.190.228.160 at 2020-04-20 15:57:27 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aMHJf/TurD1dOlVZ2DH8Hou/Q9jG24WRkyy1xr8ZsMKh3MafNVAP9CLj+tmeaQptS3nIXX5AVYQMquyywQ7O6Q==", "user"=>{"name"=>"Austen", "email"=>"austen.valletta@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "austen.valletta@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Austen"], ["email", "austen.valletta@gmail.com"], ["password_digest", "$2a$12$NdUB38CFKS/zkzvD.s1RRecJH64ZjoyXSMHCy4YUg7Z6WRUFrMQEm"], ["created_at", "2020-04-20 15:57:27.747093"], ["updated_at", "2020-04-20 15:57:27.747093"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to https://bb5ee1cb8ca54f59b28593d7eadec39d.vfs.cloud9.us-east-1.amazonaws.com/users/1
+Completed 302 Found in 314ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/users/1" for 75.190.228.160 at 2020-04-20 15:57:27 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 75.190.228.160 at 2020-04-20 15:57:36 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 75.190.228.160 at 2020-04-20 15:57:50 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:57:54 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 75.190.228.160 at 2020-04-20 15:57:56 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 75.190.228.160 at 2020-04-20 15:58:01 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"genJ+Mr/4Ayt8iDW0D/yfSdRlCMpKBlELPzT8fUkDVsCJHHaRgQf69kcnW1YyienRNi638WuQvG/zxAZiSHIdQ==", "email"=>"austen.valletta@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "austen.valletta@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 342ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 75.190.228.160 at 2020-04-20 15:58:13 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XYU5n7zGCIR1YQBHb2bnKX60Pg5grLJzDA+lF82TvhLoxUliUh7H9l5O0KA29c/ImfHIcV3ZR3UVN1ZenUvCWQ==", "email"=>"austen.valletta@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "austen.valletta@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5
+Redirected to https://bb5ee1cb8ca54f59b28593d7eadec39d.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 299ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 15:58:13 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-20 16:00:13 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 75.190.228.160 at 2020-04-20 16:00:14 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 75.190.228.160 at 2020-04-20 16:00:29 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T4sQ0u4wWEZYtJpN3WIgMiTD2/wGB6iifZazYkxGX8UL/p6Nd7KhDs+xHemt0ekfOe5QljSLq0yLN5jHYOwFLg==", "article"=>{"title"=>"Signed In Article", "text"=>"This is the first article with a user sign in"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Signed In Article"], ["text", "This is the first article with a user sign in"], ["created_at", "2020-04-20 16:00:29.474797"], ["updated_at", "2020-04-20 16:00:29.474797"], ["user_id", 1]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+Redirected to https://bb5ee1cb8ca54f59b28593d7eadec39d.vfs.cloud9.us-east-1.amazonaws.com/articles/10
+Completed 302 Found in 14ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/articles/10" for 75.190.228.160 at 2020-04-20 16:00:29 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (7.5ms)
+  Rendered articles/show.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-20 16:02:39 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 16:05:40 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered welcome/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 296ms (Views: 288.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-20 16:05:43 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-20 16:05:46 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.7ms)
+
+
