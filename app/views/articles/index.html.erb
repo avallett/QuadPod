@@ -7,7 +7,7 @@
     <th>Author</th>
   </tr>
  
-  <% @articles.each do |article| %>
+  <% @articles.sort_by {|article| article.hits}.reverse!.each do |article| %>
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>

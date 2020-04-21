@@ -4461,3 +4461,795 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 79ms (Views: 49.5ms | ActiveRecord: 10.5ms)
 
 
+Started GET "/" for 75.190.228.160 at 2020-04-21 17:57:58 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 275ms (Views: 268.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-21 17:58:17 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-21 17:58:19 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 1], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 7], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 8], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 10], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 67ms (Views: 59.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:26 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:26.418713"], ["ends_at", "2020-04-21 17:58:26.418713"], ["average_time", "2020-04-21 17:58:26.418713"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (10.7ms)
+  Rendered articles/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 85ms (Views: 52.8ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/articles/7" for 75.190.228.160 at 2020-04-21 17:58:36 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 7], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:36.370891"], ["ends_at", "2020-04-21 17:58:36.370891"], ["average_time", "2020-04-21 17:58:36.370891"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 7], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 52ms (Views: 37.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/articles/8" for 75.190.228.160 at 2020-04-21 17:58:38 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 8], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:38.796635"], ["ends_at", "2020-04-21 17:58:38.796635"], ["average_time", "2020-04-21 17:58:38.796635"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 8], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 35.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/articles/10" for 75.190.228.160 at 2020-04-21 17:58:41 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 10], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:41.957299"], ["ends_at", "2020-04-21 17:58:41.957299"], ["average_time", "2020-04-21 17:58:41.957299"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 10], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 51ms (Views: 35.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/articles/1" for 75.190.228.160 at 2020-04-21 17:58:45 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 1], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:45.266344"], ["ends_at", "2020-04-21 17:58:45.266344"], ["average_time", "2020-04-21 17:58:45.266344"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 1], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of comments/_comment.html.erb [1 times] (0.7ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 58ms (Views: 40.4ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:54 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.9ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:54.461645"], ["ends_at", "2020-04-21 17:58:54.461645"], ["average_time", "2020-04-21 17:58:54.461645"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 52ms (Views: 36.5ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:56 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (1.5ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:56.401159"], ["ends_at", "2020-04-21 17:58:56.401159"], ["average_time", "2020-04-21 17:58:56.401159"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 65ms (Views: 49.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:56 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:56.856633"], ["ends_at", "2020-04-21 17:58:56.856633"], ["average_time", "2020-04-21 17:58:56.856633"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 52ms (Views: 36.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:57 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:57.339722"], ["ends_at", "2020-04-21 17:58:57.339722"], ["average_time", "2020-04-21 17:58:57.339722"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 54ms (Views: 39.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:57 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:57.557494"], ["ends_at", "2020-04-21 17:58:57.557494"], ["average_time", "2020-04-21 17:58:57.557494"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 51ms (Views: 34.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:57 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:57.806955"], ["ends_at", "2020-04-21 17:58:57.806955"], ["average_time", "2020-04-21 17:58:57.806955"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 51ms (Views: 35.1ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:58 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:58.057302"], ["ends_at", "2020-04-21 17:58:58.057302"], ["average_time", "2020-04-21 17:58:58.057302"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 50ms (Views: 35.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:58 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:58.422707"], ["ends_at", "2020-04-21 17:58:58.422707"], ["average_time", "2020-04-21 17:58:58.422707"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 70ms (Views: 54.4ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:58 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:58.950953"], ["ends_at", "2020-04-21 17:58:58.950953"], ["average_time", "2020-04-21 17:58:58.950953"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 53ms (Views: 36.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:59 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:59.203034"], ["ends_at", "2020-04-21 17:58:59.203034"], ["average_time", "2020-04-21 17:58:59.203034"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 52ms (Views: 35.8ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:59 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:59.486888"], ["ends_at", "2020-04-21 17:58:59.486888"], ["average_time", "2020-04-21 17:58:59.486888"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 35.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:58:59 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:58:59.757662"], ["ends_at", "2020-04-21 17:58:59.757662"], ["average_time", "2020-04-21 17:58:59.757662"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 38.9ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:00 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.9ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:00.042319"], ["ends_at", "2020-04-21 17:59:00.042319"], ["average_time", "2020-04-21 17:59:00.042319"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 53ms (Views: 35.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:00 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:00.328000"], ["ends_at", "2020-04-21 17:59:00.328000"], ["average_time", "2020-04-21 17:59:00.328000"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 47ms (Views: 34.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:00 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:00.601338"], ["ends_at", "2020-04-21 17:59:00.601338"], ["average_time", "2020-04-21 17:59:00.601338"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 49ms (Views: 34.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:00 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:00.856227"], ["ends_at", "2020-04-21 17:59:00.856227"], ["average_time", "2020-04-21 17:59:00.856227"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 55ms (Views: 39.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:01 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:01.149378"], ["ends_at", "2020-04-21 17:59:01.149378"], ["average_time", "2020-04-21 17:59:01.149378"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 51ms (Views: 34.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:01 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:01.424416"], ["ends_at", "2020-04-21 17:59:01.424416"], ["average_time", "2020-04-21 17:59:01.424416"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 35.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:01 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:01.707345"], ["ends_at", "2020-04-21 17:59:01.707345"], ["average_time", "2020-04-21 17:59:01.707345"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 65ms (Views: 49.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:02 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:02.010056"], ["ends_at", "2020-04-21 17:59:02.010056"], ["average_time", "2020-04-21 17:59:02.010056"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 57ms (Views: 40.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:02 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:02.304603"], ["ends_at", "2020-04-21 17:59:02.304603"], ["average_time", "2020-04-21 17:59:02.304603"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 35.0ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:02 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:02.570758"], ["ends_at", "2020-04-21 17:59:02.570758"], ["average_time", "2020-04-21 17:59:02.570758"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 34.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:02 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:02.859500"], ["ends_at", "2020-04-21 17:59:02.859500"], ["average_time", "2020-04-21 17:59:02.859500"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 34.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:03 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.9ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:03.135085"], ["ends_at", "2020-04-21 17:59:03.135085"], ["average_time", "2020-04-21 17:59:03.135085"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 55ms (Views: 39.0ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/articles/2" for 75.190.228.160 at 2020-04-21 17:59:03 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.8ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 2], ["punchable_type", "Article"], ["starts_at", "2020-04-21 17:59:03.429323"], ["ends_at", "2020-04-21 17:59:03.429323"], ["average_time", "2020-04-21 17:59:03.429323"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:12
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:16
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (15.4ms)
+  Rendered articles/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 66ms (Views: 49.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-21 17:59:06 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 1], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 7], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 8], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 10], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-21 18:01:37 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 278ms (Views: 270.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-21 18:01:51 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-21 18:01:54 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 1], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 2], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 7], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 8], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 10], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 73ms (Views: 65.5ms | ActiveRecord: 2.1ms)
+
+
