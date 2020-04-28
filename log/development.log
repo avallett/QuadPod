@@ -12278,3 +12278,60 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/sessions" for 75.190.228.160 at 2020-04-28 18:50:09 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hvxx1KqslyhzZbn8v5puwzT5bk3NUag2MSXuUnhKMvFNa/JLPkePsWfAb5wKT/iB5wjPxCAd6ro/M/MfMRUmkA==", "email"=>"austen.valletta@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "austen.valletta@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5
+Redirected to https://bb5ee1cb8ca54f59b28593d7eadec39d.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 302ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 75.190.228.160 at 2020-04-28 18:50:09 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 75.190.228.160 at 2020-04-28 18:50:10 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 11], ["punchable_type", "Article"]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/11" for 75.190.228.160 at 2020-04-28 18:50:12 +0000
+Cannot render console from 75.190.228.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[36mPunch Create (0.3ms)[0m  [1m[32mINSERT INTO "punches" ("punchable_id", "punchable_type", "starts_at", "ends_at", "average_time") VALUES (?, ?, ?, ?, ?)[0m  [["punchable_id", 11], ["punchable_type", "Article"], ["starts_at", "2020-04-28 18:50:12.081826"], ["ends_at", "2020-04-28 18:50:12.081826"], ["average_time", "2020-04-28 18:50:12.081826"]]
+  ↳ app/controllers/articles_controller.rb:12
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:12
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("punches"."hits") FROM "punches" WHERE "punches"."punchable_id" = ? AND "punches"."punchable_type" = ?[0m  [["punchable_id", 11], ["punchable_type", "Article"]]
+  ↳ app/views/articles/show.html.erb:10
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 11]]
+  ↳ app/views/articles/show.html.erb:14
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 6.2ms)
+
+
