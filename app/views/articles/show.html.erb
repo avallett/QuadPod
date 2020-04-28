@@ -1,13 +1,11 @@
+<h2>
+  <strong><%= @article.title %></strong>
+</h2>
+
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
   <%= @article.text %><br>
-  <%= @article.created_at.localtime("-04:00").strftime("Created at %I:%M%p on %m/%d/%Y") %>
 </p>
+<h6><em><%= @article.created_at.localtime("-04:00").strftime("Created at %I:%M%p on %m/%d/%Y") %></em></h6>
 <p>
   Number of visits: <%= @article.hits %>
 </p>
