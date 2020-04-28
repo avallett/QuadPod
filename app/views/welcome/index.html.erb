@@ -1,12 +1,14 @@
+<div class="homepage">
 <h1>Hello, Blog App User!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<%= link_to 'My Blog', {controller: 'articles'}, class: "unibutton" %>
 
 <p>
     <% if current_user %>
         Logged in as <% current_user.name %>
-        <%= link_to "Log Out", logout_path %>
+        <%= link_to "Log Out", logout_path, class: "unibutton" %>
     <% else %>
-        <%= link_to "Sign Up", signup_path %>
-        <%= link_to "Log In", login_path %>
+        <%= link_to "Sign Up", signup_path, class: "unibutton" %>
+        <%= link_to "Log In", login_path, class: "unibutton" %>
     <% end %>
 </p>
+</div>

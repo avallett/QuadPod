@@ -12,10 +12,10 @@
   Number of visits: <%= @article.hits %>
 </p>
 
-<h2>Comments</h2>
+<h3>Comments</h3>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h3>Add a comment:</h3>
 <%= render 'comments/form' %>
 
-<%= link_to 'Article List', articles_path %>
+<%= link_to 'Article List', articles_path, class: "unibutton" %>
